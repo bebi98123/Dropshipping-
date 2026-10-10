@@ -64,7 +64,7 @@ document.addEventListener("tepore:ready", () => {
 
   $$("[data-express]").forEach((b) => b.addEventListener("click", () => {
     // Qui va il pulsante reale del provider (Stripe Payment Request / PayPal Smart Buttons)
-    alert("Collega il provider di pagamento per attivare il pagamento rapido.");
+    $("#expressMsg").hidden = false;
   }));
 
   $("#coForm").addEventListener("submit", (e) => {

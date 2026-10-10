@@ -415,7 +415,7 @@
     const initials = r.name.split(" ").map((x) => x[0]).join("").slice(0, 2);
     return `<article class="review reveal">
       <div class="review-head"><div class="review-avatar">${initials}</div><div><b>${r.name}</b><small>${r.city}</small></div></div>
-      ${stars(r.rating)} <span class="verified">${icon("check")} Acquisto verificato</span>
+      ${stars(r.rating)} ${S.reviewsAreSamples ? `<span class="verified" style="color:var(--muted)">Recensione di esempio</span>` : `<span class="verified">${icon("check")} Acquisto verificato</span>`}
       <h4>${r.title}</h4><p>${r.text}</p>
       ${p ? `<a class="review-product" href="${productUrl(p)}"><img src="${p.image}" alt="" class="${fitClass(p)}">${p.name}</a>` : ""}
     </article>`;

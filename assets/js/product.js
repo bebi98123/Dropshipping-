@@ -4,7 +4,12 @@ document.addEventListener("tepore:ready", () => {
   const { $, $$, money, icon, stars, fitClass, pct, TIERS } = T;
   const S = window.STORE;
 
-  const slug = new URLSearchParams(location.search).get("p");
+  // Il prodotto arriva da ?p=slug oppure da #slug
+  const slug = new URLSearchParams(location.search).get("p") || location.hash.slice(1);
+  window.addEventListener("hashchange", () => {
+    const next = T.bySlug(location.hash.slice(1));
+    if (next && next.slug !== slug) location.reload();
+  });
   const p = T.bySlug(slug) || window.PRODUCTS[0];
   const fit = fitClass(p);
   document.title = `${p.name} — ${p.subtitle} | Tepore`;
