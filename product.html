@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tepore</title>
+  <meta name="description" content="Prodotti riscaldati Tepore: spedizione gratuita sopra 49 €, reso 30 giorni, garanzia 2 anni.">
+  <meta name="theme-color" content="#17120f">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div data-chrome-top></div>
+
+  <main id="pdpRoot">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Percorso"><a href="index.html">Home</a> / <a href="index.html#prodotti">Prodotti</a> / <span id="bcName"></span></nav>
+
+      <div class="pdp">
+        <div class="gallery">
+          <div class="gallery-main" id="galleryMain"></div>
+          <div class="gallery-thumbs" id="galleryThumbs"></div>
+        </div>
+
+        <div class="pdp-info" id="pdpInfo"></div>
+      </div>
+    </div>
+
+    <section class="section" style="padding-bottom:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Perché lo amerai</span>
+          <h2 id="hlTitle"></h2>
+        </div>
+        <div class="highlights benefits" id="highlights"></div>
+      </div>
+    </section>
+
+    <section class="section section-dark grain" style="margin-top:clamp(72px,9vw,130px)">
+      <div class="container story" id="story"></div>
+    </section>
+
+    <section class="section section-cream" id="recensioni">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Recensioni</span>
+          <h2>Chi l'ha provato, <span class="grad-text">non torna indietro</span>.</h2>
+          <div class="reviews-summary" id="pdpReviewSum"></div>
+        </div>
+        <div class="reviews-grid" id="pdpReviews"></div>
+        <p class="sample-note" id="sampleNote" hidden>Recensioni dimostrative: collega il tuo servizio di recensioni verificate per mostrare quelle reali.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Completa il rituale</span>
+          <h2>Potrebbe piacerti anche</h2>
+        </div>
+        <div class="product-grid" id="crossSell" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"></div>
+      </div>
+    </section>
+
+    <section class="section section-cream" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-head left reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Domande frequenti</h2>
+          <p>Hai altri dubbi? Scrivici: <a href="mailto:ciao@tepore.it" style="color:var(--ember-deep);font-weight:600">ciao@tepore.it</a></p>
+        </div>
+        <div id="faqList"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-atc" id="stickyAtc"></div>
+
+  <div data-chrome-bottom></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/product.js"></script>
+</body>
+</html>

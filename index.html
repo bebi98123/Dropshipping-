@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tepore — Il calore che ti segue, stanza dopo stanza</title>
+  <meta name="description" content="Tappetino bagno riscaldato, pantofole riscaldate USB e scaldatazza smart. Spedizione gratuita sopra 49 €, reso 30 giorni, garanzia 2 anni.">
+  <meta name="theme-color" content="#17120f">
+  <meta property="og:title" content="Tepore — Il calore che ti segue">
+  <meta property="og:description" content="Tappetino riscaldato, pantofole riscaldate e scaldatazza smart. Comfort caldo per l'inverno.">
+  <meta property="og:image" content="assets/img/mat.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div data-chrome-top></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero grain">
+      <div class="container">
+        <div class="hero-copy">
+          <span class="hero-eyebrow reveal"><span class="pill">Nuovo</span> La collezione inverno è arrivata</span>
+          <h1 class="reveal reveal-d1">Il <span class="grad-text">calore</span> che ti segue, stanza dopo stanza.</h1>
+          <p class="hero-lead reveal reveal-d2">Tappetino bagno riscaldato, pantofole ricaricabili e scaldatazza smart: tre piccoli lussi per dire addio a pavimenti gelidi, piedi freddi e caffè tiepido.</p>
+          <div class="hero-cta reveal reveal-d3">
+            <a href="#prodotti" class="btn btn-primary">Scopri la collezione <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#kit" class="btn btn-ghost">Kit Inverno −22%</a>
+          </div>
+          <div class="hero-proof reveal reveal-d3">
+            <div class="avatars">
+              <span style="background:#ffcf86">G</span><span style="background:#ff9a3d">M</span><span style="background:#ff6a2b;color:#fff">F</span><span style="background:#f3e3d0">S</span>
+            </div>
+            <div>
+              <span class="stars" id="heroStars"></span>
+              <small><strong>4,8/5</strong> · oltre <strong>4.500</strong> clienti al calduccio</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-d2">
+          <div class="hero-frame"><img src="assets/img/mat.jpg" alt="Tappetino bagno riscaldato Tepore Mat con luce calda" fetchpriority="high"></div>
+          <svg class="heatwaves" viewBox="0 0 200 120" aria-hidden="true">
+            <defs><linearGradient id="hw" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff7a30"/><stop offset="1" stop-color="#ffd59a" stop-opacity="0"/></linearGradient></defs>
+            <path d="M30 110c-12-18 12-30 0-50s12-32 0-52"/>
+            <path d="M75 110c-12-18 12-30 0-50s12-32 0-52"/>
+            <path d="M120 110c-12-18 12-30 0-50s12-32 0-52"/>
+            <path d="M165 110c-12-18 12-30 0-50s12-32 0-52"/>
+          </svg>
+          <div class="temp-chip"><div><b>40°</b><small>sotto i piedi</small></div></div>
+          <a href="product.html?p=pantofole-riscaldate" class="float-card fc-1">
+            <img src="assets/img/slippers.jpg" alt="">
+            <div><b>Tepore Slippers</b><small>fino a 6h di calore · <span class="price">39,90 €</span></small></div>
+          </a>
+          <a href="product.html?p=scaldatazza-smart" class="float-card fc-2">
+            <img src="assets/img/mug-warmer.jpg" alt="">
+            <div><b>Tepore Cup</b><small>caffè caldo, sempre · <span class="price">29,90 €</span></small></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+    <!-- PRODOTTI -->
+    <section class="section" id="prodotti">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">I più amati</span>
+          <h2>Tre gesti caldi, <span class="grad-text">ogni giorno</span>.</h2>
+          <p>Progettati per i momenti più freddi della giornata. Pochi prodotti, scelti con cura e testati uno per uno.</p>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- RITUALE -->
+    <section class="section section-dark ritual grain" id="rituale">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Il rituale Tepore</span>
+          <h2>Una mattina d'inverno, <span class="grad-text">senza brividi</span>.</h2>
+          <p>Dal primo passo fuori dal letto all'ultima email della giornata.</p>
+        </div>
+        <div class="ritual-grid" id="ritualGrid"></div>
+      </div>
+    </section>
+
+    <!-- TERMOSTATO INTERATTIVO -->
+    <section class="section section-cream">
+      <div class="container thermo">
+        <div class="thermo-dial reveal" id="dial">
+          <div class="thermo-readout"><b><span id="tempVal">45</span><sup>°C</sup></b><span id="tempLabel">Calore avvolgente</span></div>
+        </div>
+        <div class="thermo-controls reveal reveal-d1">
+          <span class="eyebrow">Trova il tuo tepore</span>
+          <h2>Che temperatura ti fa stare bene?</h2>
+          <p>Ogni prodotto Tepore ha più livelli di calore. Muovi il cursore e scopri quale fa per te.</p>
+          <input type="range" class="range" id="tempRange" min="35" max="65" value="45" step="1" aria-label="Temperatura">
+          <div class="range-labels"><span>35 °C · tiepido</span><span>50 °C</span><span>65 °C · bollente</span></div>
+          <ul class="thermo-match" id="thermoMatch"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUNDLE -->
+    <section class="section" id="kit">
+      <div class="container">
+        <div class="bundle reveal">
+          <div class="bundle-visual">
+            <img class="b-main" src="assets/img/mat.jpg" alt="Kit Inverno Tepore">
+            <img class="b-thumb b-t1" src="assets/img/slippers.jpg" alt="">
+            <img class="b-thumb b-t2" src="assets/img/mug-warmer.jpg" alt="">
+          </div>
+          <div class="bundle-body">
+            <div class="bundle-stamp"><div><b id="bundlePct">-22%</b>sul kit</div></div>
+            <span class="eyebrow">Offerta Kit</span>
+            <h2>Kit Inverno Tepore</h2>
+            <p>Tutti e tre i prodotti, un solo prezzo. Il regalo perfetto — anche per te stesso.</p>
+            <ul class="bundle-list" id="bundleList"></ul>
+            <div class="bundle-price"><b id="bundlePrice"></b><s id="bundleCompare"></s><span class="price-save" id="bundleSave"></span></div>
+            <div class="opt-label" style="color:#f1dfcf">Taglia pantofole</div>
+            <div class="variants bundle-sizes" id="bundleSizes"></div>
+            <button class="btn btn-primary btn-block" id="bundleAdd">Aggiungi il kit al carrello</button>
+            <p style="margin-top:14px;font-size:13.5px;color:#a8907c">Spedizione gratuita · Reso 30 giorni · Confezione regalo inclusa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICI -->
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Perché Tepore</span>
+          <h2>Comfort serio, <span class="grad-text">zero pensieri</span>.</h2>
+        </div>
+        <div class="benefits" id="benefits"></div>
+      </div>
+    </section>
+
+    <!-- CONFRONTO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Il confronto</span>
+          <h2>Tepore vs. il solito <span class="grad-text">"economico"</span></h2>
+          <p>Non tutti i prodotti riscaldati sono uguali. Ecco cosa fa la differenza.</p>
+        </div>
+        <div class="compare reveal">
+          <table>
+            <thead><tr><th></th><th class="us">Tepore</th><th>Altri</th></tr></thead>
+            <tbody id="compareBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENSIONI -->
+    <section class="section section-cream" id="recensioni">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Recensioni</span>
+          <h2>Migliaia di piedi <span class="grad-text">finalmente caldi</span>.</h2>
+          <div class="reviews-summary"><span class="big">4,8</span><div><span id="sumStars"></span><div style="color:var(--muted);font-size:14px">su oltre 4.500 recensioni</div></div></div>
+        </div>
+        <div class="reviews-grid" id="reviewsGrid"></div>
+        <p class="sample-note" id="sampleNote" hidden>Recensioni dimostrative: collega il tuo servizio di recensioni verificate per mostrare quelle reali.</p>
+      </div>
+    </section>
+
+    <!-- NUMERI -->
+    <section class="section section-dark grain" style="padding:clamp(60px,7vw,100px) 0">
+      <div class="container stats">
+        <div class="stat reveal"><b data-count="4500" data-suffix="+">4.500+</b><span>clienti soddisfatti</span></div>
+        <div class="stat reveal reveal-d1"><b data-count="4.8">4,8</b><span>valutazione media</span></div>
+        <div class="stat reveal reveal-d2"><b data-count="30" data-suffix=" gg">30 gg</b><span>per il reso gratuito</span></div>
+        <div class="stat reveal reveal-d3"><b data-count="60" data-suffix=" s">60 s</b><span>per sentire il calore</span></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-head left reveal">
+          <span class="eyebrow">Domande frequenti</span>
+          <h2>Tutto quello che vuoi sapere.</h2>
+          <p>Non trovi la risposta? Scrivici a <a href="mailto:ciao@tepore.it" style="color:var(--ember-deep);font-weight:600">ciao@tepore.it</a>, rispondiamo entro 24 ore.</p>
+        </div>
+        <div class="reveal reveal-d1" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- GARANZIE -->
+    <div class="container">
+      <div class="trust-strip" id="trustStrip"></div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <section class="section" style="padding-bottom:0">
+      <div class="container">
+        <div class="newsletter reveal" id="newsletter">
+          <div>
+            <h2>-10% sul tuo primo ordine.</h2>
+            <p>Iscriviti al Club Tepore: offerte riservate, consigli per l'inverno e nessuno spam.</p>
+          </div>
+          <div>
+            <form class="nl-form" id="nlForm">
+              <input type="email" name="email" placeholder="La tua email" required aria-label="Email">
+              <button class="btn btn-dark" type="submit">Iscrivimi</button>
+            </form>
+            <p class="nl-legal">Iscrivendoti accetti la nostra <a href="info.html#privacy" style="text-decoration:underline">privacy policy</a>. Puoi cancellarti quando vuoi.</p>
+            <div class="nl-success">Benvenuto nel Club! Il tuo codice: <code>BENVENUTO</code> — usalo nel carrello.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-bottom></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>
