@@ -24,7 +24,7 @@ document.addEventListener("tepore:ready", () => {
     { thumb: `<img src="${p.image}" alt="" class="${fit}">`, html: `<img src="${p.image}" alt="${p.name} — ${p.subtitle}" class="${fit} zoomable">` },
     {
       thumb: `<div class="g-slide g-slide-dark"><span class="g-mini">${maxT}°C</span></div>`,
-      html: `<div class="g-slide g-slide-dark"><div><div class="g-big">${p.tempRange[0]}–${maxT}<span style="font-size:.45em">°C</span></div><div class="g-cap">${p.highlights[1].title}</div></div></div>`,
+      html: `<div class="g-slide g-slide-dark"><div><div class="g-big">${p.tempRange[0]}–${maxT}<span style="font-size:.45em">°C</span></div><div class="g-cap">${p.subtitle}</div></div></div>`,
     },
     {
       thumb: `<div class="g-slide g-slide-heat">${icon("flame")}</div>`,
@@ -76,8 +76,8 @@ document.addEventListener("tepore:ready", () => {
     <h1>${p.name}</h1>
     <p class="pdp-sub">${p.subtitle}</p>
     <div class="pdp-rating">${stars(p.rating)} <b>${num(p.rating, 1)}</b> <a href="#recensioni">${t("card.reviews", { n: num(p.reviewsCount) })}</a></div>
-    <div class="pdp-price"><span class="price-now">${money(p.price)}</span><span class="price-old">${money(p.compareAt)}</span><span class="price-save">${t("card.save", { amount: money(p.compareAt - p.price) })}</span></div>
-    <p class="omnibus">${t("pdp.vat")} · ${t("pdp.lowest", { amount: money(p.lowest30) })}</p>
+    <div class="pdp-price"><span class="price-now">${money(p.price)}</span><span class="price-old" title="${t("pdp.rrp", { amount: money(p.compareAt) })}">${money(p.compareAt)}</span><span class="price-save">${t("card.save", { amount: money(p.compareAt - p.price) })}</span></div>
+    <p class="omnibus">${t("pdp.vat")} · ${t("pdp.rrp", { amount: money(p.compareAt) })} · ${t("pdp.lowest", { amount: money(p.lowest30) })}</p>
     <p class="pdp-short">${p.short}</p>
     <ul class="pdp-bullets">${p.highlights.map((h) => `<li>${icon("check")} <span><b>${h.title}</b> — ${h.text}</span></li>`).join("")}</ul>
 

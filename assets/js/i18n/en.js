@@ -69,7 +69,7 @@
       title: 'The <span class="grad-text">warmth</span> that follows you, room by room.',
       lead: "A heated bath mat, rechargeable slippers and a smart mug warmer: three small luxuries against icy floors, cold feet and lukewarm coffee.",
       cta: "Shop the collection",
-      cta2: "Complete kit −{kitPct}%",
+      cta2: "Winter Kit −{kitPct}%",
       proof: "<strong>4.8/5</strong> · over <strong>4,500</strong> cosy customers",
       chip: "under your feet",
       fc1: "up to 6 h of warmth",
@@ -158,6 +158,7 @@
       home: "Home", products: "Products",
       vat: "VAT included",
       lowest: "Lowest price in the last 30 days: {amount}",
+      rrp: "RRP {amount}",
       select: "Select",
       offer: "Choose your offer",
       stock: "In stock · order today, we ship <b>{date}</b>",
@@ -267,7 +268,7 @@
     "tepore-mat": {
       subtitle: "Heated bath mat with display",
       short: "Icy floors? Never again. Ultra-soft microfibre and adjustable warmth under your feet.",
-      storyTitle: "The coldest moment of your day, transformed.",
+      storyTitle: "Warm feet from your very first step.",
       badge: "Bestseller",
       variantLabel: "Colour",
       chooseCta: "Choose a colour",
@@ -292,7 +293,7 @@
     "tepore-slippers": {
       subtitle: "Rechargeable USB heated slippers",
       short: "Sherpa fleece, a non-slip sole and up to 6 hours of warmth. For anyone whose feet are always cold.",
-      storyTitle: "Truly warm, not just soft.",
+      storyTitle: "The comfort your evenings were missing.",
       badge: "Viral on TikTok",
       variantLabel: "Size (EU)",
       chooseCta: "Choose your size",
@@ -317,7 +318,7 @@
     "tepore-cup": {
       subtitle: "Smart mug warmer with auto-sensing",
       short: "Put your mug down and it switches on. Lift it and it switches off. Your coffee stays hot to the last sip.",
-      storyTitle: "The last sip, as hot as the first.",
+      storyTitle: "No more forgotten, cold coffee.",
       badge: "Great gift",
       variantLabel: "Finish",
       chooseCta: "Choose a finish",

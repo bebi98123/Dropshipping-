@@ -12,7 +12,7 @@ document.addEventListener("tepore:ready", () => {
   /* Marquee */
   const marqueeIcons = ["truck", "return", "shield", "flame", "lock", "gift"];
   const row = t("marquee").map((txt, i) => `<span class="marquee-item">${icon(marqueeIcons[i])} ${txt}</span>`).join("");
-  $("#marquee").innerHTML = row + row;
+  $("#marquee").innerHTML = row + row + row + row;
 
   /* Griglia prodotti */
   $("#productGrid").innerHTML = P.map((p, i) => T.productCard(p, i)).join("");

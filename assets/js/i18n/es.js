@@ -69,7 +69,7 @@
       title: 'El <span class="grad-text">calor</span> que te acompaña, habitación tras habitación.',
       lead: "Alfombra de baño calefactada, zapatillas recargables y calentador de tazas inteligente: tres pequeños lujos contra los suelos helados, los pies fríos y el café tibio.",
       cta: "Descubre la colección",
-      cta2: "Kit completo −{kitPct} %",
+      cta2: "Kit Invierno −{kitPct} %",
       proof: "<strong>4,8/5</strong> · más de <strong>4.500</strong> clientes bien calentitos",
       chip: "bajo tus pies",
       fc1: "hasta 6 h de calor",
@@ -158,6 +158,7 @@
       home: "Inicio", products: "Productos",
       vat: "IVA incluido",
       lowest: "Precio más bajo de los últimos 30 días: {amount}",
+      rrp: "PVP recomendado {amount}",
       select: "Seleccionar",
       offer: "Elige tu oferta",
       stock: "En stock · pide hoy y lo enviamos el <b>{date}</b>",
@@ -267,7 +268,7 @@
     "tepore-mat": {
       subtitle: "Alfombra de baño calefactada con pantalla",
       short: "¿Suelo helado? Nunca más. Microfibra suavísima y calor regulable bajo tus pies.",
-      storyTitle: "El momento más frío del día, transformado.",
+      storyTitle: "Pies calentitos desde el primer paso.",
       badge: "El más vendido",
       variantLabel: "Color",
       chooseCta: "Elige el color",
@@ -292,7 +293,7 @@
     "tepore-slippers": {
       subtitle: "Zapatillas calefactables recargables por USB",
       short: "Forro sherpa, suela antideslizante y hasta 6 horas de calor. Para quien siempre tiene los pies fríos.",
-      storyTitle: "Calientes de verdad, no solo suaves.",
+      storyTitle: "El confort que les faltaba a tus tardes.",
       badge: "Viral en TikTok",
       variantLabel: "Talla (EU)",
       chooseCta: "Elige tu talla",
@@ -317,7 +318,7 @@
     "tepore-cup": {
       subtitle: "Calentador de tazas inteligente con sensor automático",
       short: "Dejas la taza y se enciende. La levantas y se apaga. El café sigue caliente hasta el último sorbo.",
-      storyTitle: "El último sorbo, tan caliente como el primero.",
+      storyTitle: "Se acabó el café olvidado y frío.",
       badge: "Idea regalo",
       variantLabel: "Acabado",
       chooseCta: "Elige el acabado",

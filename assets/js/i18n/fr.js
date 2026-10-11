@@ -25,7 +25,7 @@
     announce: {
       free: "<strong>Livraison offerte</strong> dès {free} d'achat",
       returns: "<strong>{returnDays} jours</strong> pour changer d'avis, sans justification",
-      code: "Code <strong>TEPORE10</strong> : −10 % sur votre première commande",
+      code: "<strong>TEPORE10</strong> : −10 % sur votre 1<sup>re</sup> commande",
       countdown: "Les soldes d'automne se terminent dans",
     },
     menuFoot: "{email} · Livraison en {days}",
@@ -70,7 +70,7 @@
       title: 'La <span class="grad-text">chaleur</span> qui vous suit, de pièce en pièce.',
       lead: "Un tapis de bain chauffant, des chaussons rechargeables et un chauffe-tasse intelligent : trois petits luxes contre le carrelage glacé, les pieds froids et le café tiède.",
       cta: "Découvrir la collection",
-      cta2: "Coffret complet −{kitPct} %",
+      cta2: "Coffret Hiver −{kitPct} %",
       proof: "<strong>4,8/5</strong> · plus de <strong>4 500</strong> clients bien au chaud",
       chip: "sous vos pieds",
       fc1: "jusqu'à 6 h de chaleur",
@@ -159,6 +159,7 @@
       home: "Accueil", products: "Produits",
       vat: "TVA incluse",
       lowest: "Prix le plus bas des 30 derniers jours : {amount}",
+      rrp: "Prix conseillé {amount}",
       select: "Choisir",
       offer: "Choisissez votre offre",
       stock: "En stock · commandez aujourd'hui, expédition le <b>{date}</b>",
@@ -268,7 +269,7 @@
     "tepore-mat": {
       subtitle: "Tapis de bain chauffant avec écran",
       short: "Le carrelage glacé ? C'est fini. Une microfibre ultra-douce et une chaleur réglable sous vos pieds.",
-      storyTitle: "Le moment le plus froid de la journée, réinventé.",
+      storyTitle: "Les pieds au chaud dès le premier pas.",
       badge: "Meilleure vente",
       variantLabel: "Couleur",
       chooseCta: "Choisir la couleur",
@@ -293,7 +294,7 @@
     "tepore-slippers": {
       subtitle: "Chaussons chauffants rechargeables USB",
       short: "Polaire sherpa, semelle antidérapante et jusqu'à 6 heures de chaleur. Pour ceux qui ont toujours froid aux pieds.",
-      storyTitle: "Vraiment chauds, pas seulement doux.",
+      storyTitle: "Le confort qui manquait à vos soirées.",
       badge: "Viral sur TikTok",
       variantLabel: "Pointure (EU)",
       chooseCta: "Choisir la pointure",
@@ -318,7 +319,7 @@
     "tepore-cup": {
       subtitle: "Chauffe-tasse intelligent à détection automatique",
       short: "Posez votre tasse, il s'allume. Soulevez-la, il s'éteint. Votre café reste chaud jusqu'à la dernière gorgée.",
-      storyTitle: "La dernière gorgée, aussi chaude que la première.",
+      storyTitle: "Fini le café oublié qui refroidit.",
       badge: "Idée cadeau",
       variantLabel: "Finition",
       chooseCta: "Choisir la finition",

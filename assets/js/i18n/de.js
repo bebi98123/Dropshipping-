@@ -24,7 +24,7 @@
     announce: {
       free: "<strong>Kostenloser Versand</strong> ab {free}",
       returns: "<strong>{returnDays} Tage</strong> Rückgaberecht, ohne Wenn und Aber",
-      code: "Code <strong>TEPORE10</strong>: 10 % Rabatt auf deine erste Bestellung",
+      code: "Code <strong>TEPORE10</strong>: 10 % auf deine erste Bestellung",
       countdown: "Herbst-Sale endet in",
     },
     menuFoot: "{email} · Lieferung in {days}",
@@ -69,7 +69,7 @@
       title: 'Die <span class="grad-text">Wärme</span>, die dich von Raum zu Raum begleitet.',
       lead: "Beheizte Badematte, aufladbare Hausschuhe und ein smarter Tassenwärmer: drei kleine Luxusmomente gegen eiskalte Fliesen, kalte Füße und lauwarmen Kaffee.",
       cta: "Kollektion entdecken",
-      cta2: "Komplett-Set −{kitPct} %",
+      cta2: "Winter-Set −{kitPct} %",
       proof: "<strong>4,8/5</strong> · über <strong>4.500</strong> Kunden mit warmen Füßen",
       chip: "unter deinen Füßen",
       fc1: "bis zu 6 Std. Wärme",
@@ -158,6 +158,7 @@
       home: "Startseite", products: "Produkte",
       vat: "inkl. MwSt.",
       lowest: "Niedrigster Preis der letzten 30 Tage: {amount}",
+      rrp: "UVP {amount}",
       select: "Auswählen",
       offer: "Wähle dein Angebot",
       stock: "Auf Lager · heute bestellen, Versand am <b>{date}</b>",
@@ -267,7 +268,7 @@
     "tepore-mat": {
       subtitle: "Beheizte Badematte mit Display",
       short: "Eiskalte Fliesen? Nie wieder. Superweiche Mikrofaser und regelbare Wärme unter deinen Füßen.",
-      storyTitle: "Der kälteste Moment des Tages, neu erfunden.",
+      storyTitle: "Warme Füße ab dem ersten Schritt.",
       badge: "Bestseller",
       variantLabel: "Farbe",
       chooseCta: "Farbe wählen",
@@ -292,7 +293,7 @@
     "tepore-slippers": {
       subtitle: "Beheizbare Hausschuhe mit USB-Akku",
       short: "Sherpa-Fleece, rutschfeste Sohle und bis zu 6 Stunden Wärme. Für alle, die immer kalte Füße haben.",
-      storyTitle: "Wirklich warm, nicht nur weich.",
+      storyTitle: "Der Komfort, der deinen Abenden gefehlt hat.",
       badge: "Viral auf TikTok",
       variantLabel: "Größe (EU)",
       chooseCta: "Größe wählen",
@@ -317,7 +318,7 @@
     "tepore-cup": {
       subtitle: "Smarter Tassenwärmer mit Automatik-Sensor",
       short: "Tasse abstellen, er schaltet sich ein. Tasse anheben, er schaltet sich aus. Dein Kaffee bleibt bis zum letzten Schluck heiß.",
-      storyTitle: "Der letzte Schluck, so heiß wie der erste.",
+      storyTitle: "Schluss mit vergessenem, kaltem Kaffee.",
       badge: "Geschenkidee",
       variantLabel: "Ausführung",
       chooseCta: "Ausführung wählen",

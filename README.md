@@ -74,7 +74,7 @@ per mostrare al cliente il prezzo originale. Quindi un negozio che regge il conf
 - [ ] **Pagamenti**: il checkout è una demo e non incassa. Collega Stripe Checkout / PayPal (punti marcati in `assets/js/checkout.js`) oppure importa i prodotti in Shopify/WooCommerce.
 - [ ] **Recensioni**: quelle in `data.js` sono di esempio. Sostituiscile con recensioni reali e verificate (Judge.me, Trustpilot…) e metti `reviewsAreSamples: false`. Pubblicare recensioni false è vietato (D.Lgs. 26/2023). Lo stesso vale per i numeri "4,8/5" e "4.500+ clienti" in `index.html`.
 - [ ] **Specifiche tecniche** (temperature, autonomia, dimensioni, certificazioni CE): verificale sulla scheda del fornitore.
-- [ ] **Prezzi barrati**: usa come prezzo di riferimento il prezzo più basso degli ultimi 30 giorni (`lowest30`).
+- [ ] **Prezzi barrati**: il prezzo barrato (`compareAt`) è indicato come *prezzo consigliato* e accanto c'è il prezzo più basso degli ultimi 30 giorni (`lowest30`). Usa un prezzo consigliato reale (quello del produttore o di listino) e tieni `lowest30` aggiornato.
 - [ ] **Dati aziendali** in `info.html#termini` (ragione sociale, P.IVA, REA) e testi legali rivisti da un professionista.
 - [ ] Newsletter e modulo contatti: collega Klaviyo/Brevo e Formspree/Netlify Forms (punti marcati nel codice).
 - [ ] Email `ciao@tepore.it` e dominio reali.

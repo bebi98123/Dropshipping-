@@ -71,7 +71,7 @@
       title: 'Il <span class="grad-text">calore</span> che ti segue, stanza dopo stanza.',
       lead: "Tappetino riscaldato, pantofole ricaricabili e scaldatazza smart: tre piccoli lussi contro pavimenti gelidi, piedi freddi e caffè tiepido.",
       cta: "Scopri la collezione",
-      cta2: "Kit completo −{kitPct}%",
+      cta2: "Kit Inverno −{kitPct}%",
       proof: "<strong>4,8/5</strong> · oltre <strong>4.500</strong> clienti al calduccio",
       chip: "sotto i piedi",
       fc1: "fino a 6 h di calore",
@@ -160,6 +160,7 @@
       home: "Home", products: "Prodotti",
       vat: "IVA inclusa",
       lowest: "Prezzo più basso degli ultimi 30 giorni: {amount}",
+      rrp: "Prezzo consigliato {amount}",
       select: "Seleziona",
       offer: "Scegli la tua offerta",
       stock: "Disponibile · ordina oggi, spediamo <b>{date}</b>",
@@ -269,7 +270,7 @@
     "tepore-mat": {
       subtitle: "Tappetino bagno riscaldato con display",
       short: "Pavimento gelido? Mai più. Microfibra morbidissima e calore regolabile sotto i piedi.",
-      storyTitle: "Il momento più freddo della giornata, trasformato.",
+      storyTitle: "Piedi caldi dal primo passo del mattino.",
       badge: "Più venduto",
       variantLabel: "Colore",
       chooseCta: "Scegli il colore",
@@ -294,7 +295,7 @@
     "tepore-slippers": {
       subtitle: "Pantofole riscaldate ricaricabili USB",
       short: "Pile sherpa, suola antiscivolo e fino a 6 ore di calore. Per chi ha sempre i piedi freddi.",
-      storyTitle: "Calde davvero, non solo morbide.",
+      storyTitle: "Il comfort che mancava alle tue serate.",
       badge: "Virale su TikTok",
       variantLabel: "Taglia",
       chooseCta: "Scegli la taglia",
@@ -319,7 +320,7 @@
     "tepore-cup": {
       subtitle: "Scaldatazza smart con sensore automatico",
       short: "Appoggi la tazza e si accende. La sollevi e si spegne. Il caffè resta caldo fino all'ultimo sorso.",
-      storyTitle: "L'ultimo sorso, caldo come il primo.",
+      storyTitle: "Basta caffè dimenticato e freddo.",
       badge: "Idea regalo",
       variantLabel: "Finitura",
       chooseCta: "Scegli la finitura",

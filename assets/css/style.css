@@ -289,8 +289,22 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Product cards ---------- */
 .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.2vw, 28px); }
-@media (max-width: 980px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 640px) { .product-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1024px) {
+  .product-grid { gap: 16px; }
+  .product-grid .card-body { padding: 18px 18px 22px; }
+  .product-grid .card-body h3 { font-size: 23px; }
+}
+@media (max-width: 760px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  /* il terzo prodotto occupa tutta la riga, in orizzontale */
+  .product-grid > .card:last-child:nth-child(odd) { grid-column: 1 / -1; flex-direction: row; }
+  .product-grid > .card:last-child:nth-child(odd) .card-media { flex: 0 0 50%; }
+  .product-grid > .card:last-child:nth-child(odd) .card-body { justify-content: center; }
+}
+@media (max-width: 560px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .product-grid > .card:last-child:nth-child(odd) { flex-direction: column; }
+}
 
 .card {
   position: relative; background: #fff; border-radius: var(--r-lg); overflow: hidden;
@@ -347,7 +361,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .link-arrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; }
 .link-arrow .icon { transition: transform 0.3s var(--ease); }
 .link-arrow:hover .icon { transform: translateX(4px); }
-@media (max-width: 900px) { .ritual-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1024px) { .ritual-grid { gap: 16px; } .ritual-step { padding: 22px; } .ritual-time { font-size: 46px; } .ritual-step h3 { font-size: 22px; } }
+@media (max-width: 760px) { .ritual-grid { grid-template-columns: 1fr; } .ritual-img { aspect-ratio: 16 / 9; } }
 
 /* ---------- Temperature playground ---------- */
 .thermo { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 80px); align-items: center; }
@@ -409,7 +424,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .bundle-price s { color: #a8907c; font-size: 20px; }
 .bundle-price .price-save { font-size: 14px; }
 .bundle-stamp {
-  position: absolute; top: 24px; right: 24px; width: 104px; height: 104px; border-radius: 50%;
+  position: absolute; top: 24px; left: 24px; width: 104px; height: 104px; border-radius: 50%; color: #fff;
   background: var(--heat); display: grid; place-items: center; text-align: center; transform: rotate(12deg);
   font-weight: 800; line-height: 1.05; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; box-shadow: var(--shadow-glow); z-index: 3;
 }
@@ -834,7 +849,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .ritual-img img.fit-contain { mix-blend-mode: multiply; }
 @media (max-width: 520px) {
   .temp-chip { top: auto; bottom: 40%; right: auto; left: 2%; }
-  .bundle-stamp { width: 84px; height: 84px; top: -42px; right: 16px; font-size: 11px; }
+  .bundle-stamp { width: 84px; height: 84px; top: 16px; left: 16px; font-size: 11px; }
   .bundle-stamp b { font-size: 24px; }
 }
 
@@ -873,3 +888,26 @@ ul { margin: 0; padding: 0; list-style: none; }
 #payBtn { white-space: normal; height: auto; min-height: var(--bh); padding-block: 12px; text-align: center; line-height: 1.3; }
 .co-main > div, .co-side > div { min-width: 0; }
 .checkout > * { min-width: 0; }
+
+/* ---------- Revisione: tablet, touch e dettagli ---------- */
+[id] { scroll-margin-top: 92px; }
+/* Su iPad e telefoni l'effetto hover restava "attaccato" dopo il tocco */
+@media (hover: none) {
+  .card:hover, .benefit:hover, .ritual-step:hover { transform: none; box-shadow: var(--shadow-sm); }
+  .ritual-step:hover { box-shadow: none; }
+  .card:hover .card-media img { transform: none; }
+  .card:hover .card-media::after { opacity: 0; }
+}
+/* Barra annunci: mai testo tagliato a metà */
+.announce-rotator { min-width: 0; max-width: 100%; }
+.announce-rotator > span { overflow: hidden; text-overflow: ellipsis; }
+.announce sup { font-size: 0.7em; line-height: 0; }
+@media (max-width: 420px) { .announce { font-size: 12px; } }
+/* Pagina prodotto su tablet: galleria e immagine "storia" meno invadenti */
+@media (min-width: 561px) and (max-width: 900px) {
+  .gallery-main { aspect-ratio: 4 / 3; }
+  .gallery-thumbs { grid-template-columns: repeat(4, minmax(0, 120px)); }
+}
+@media (max-width: 860px) { .story-img { aspect-ratio: 16 / 10; } }
+.card .rating { white-space: nowrap; }
+.card .rating b { color: var(--ink); font-weight: 600; }

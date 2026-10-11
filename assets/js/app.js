@@ -407,6 +407,13 @@
   function bindGlobal() {
     document.addEventListener("click", (e) => {
       if (!e.target.closest("#langSwitch")) toggleLang(false);
+      const anchor = e.target.closest('a[href^="#"]');
+      const dest = anchor && anchor.getAttribute("href").length > 1 && document.getElementById(anchor.getAttribute("href").slice(1));
+      if (dest) {
+        e.preventDefault();
+        dest.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+        return;
+      }
       const el = e.target.closest("[data-open-cart],[data-close-cart],[data-add],[data-qty],[data-remove],[data-open-menu],[data-close-menu],[data-lang-toggle],[data-lang],.faq-q");
       if (!el) return;
       if (el.matches("[data-lang-toggle]")) { toggleLang(); }
@@ -522,10 +529,10 @@
             : `<a class="btn btn-dark btn-block btn-sm" href="${productUrl(p)}">${p.chooseCta} ${icon("arrow")}</a>`}</div>
         </div>
         <div class="card-body">
-          <div class="rating">${stars(p.rating)} <span>${num(p.rating, 1)} · ${t("card.reviews", { n: num(p.reviewsCount) })}</span></div>
+          <div class="rating" title="${t("card.reviews", { n: num(p.reviewsCount) })}">${stars(p.rating)} <span><b>${num(p.rating, 1)}</b> (${num(p.reviewsCount)})</span></div>
           <h3><a href="${productUrl(p)}">${p.name}</a></h3>
           <p class="card-sub">${p.subtitle}</p>
-          <div class="price-row"><span class="price-now">${money(p.price)}</span><span class="price-old">${money(p.compareAt)}</span><span class="price-save">${t("card.save", { amount: money(p.compareAt - p.price) })}</span></div>
+          <div class="price-row"><span class="price-now">${money(p.price)}</span><span class="price-old" title="${t("pdp.rrp", { amount: money(p.compareAt) })}">${money(p.compareAt)}</span><span class="price-save">${t("card.save", { amount: money(p.compareAt - p.price) })}</span></div>
           <div class="card-actions"><a href="${productUrl(p)}" class="btn btn-primary btn-sm">${t("card.cta")} ${icon("arrow")}</a></div>
         </div>
       </article>`;
