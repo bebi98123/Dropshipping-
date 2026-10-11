@@ -25,11 +25,26 @@ index.html        Home: hero, prodotti, rituale, termostato interattivo, kit, co
 product.html      Pagina prodotto (?p=tappetino-bagno-riscaldato | pantofole-riscaldate | scaldatazza-smart)
 checkout.html     Checkout (dimostrativo, vedi sotto)
 info.html         Spedizioni, resi, garanzia, termini, privacy, contatti
-assets/js/data.js ← QUI si modificano prezzi, testi, recensioni, FAQ, codici sconto, data fine promo
-assets/js/app.js  Header/footer, carrello (localStorage), drawer, animazioni
+assets/js/data.js ← QUI prezzi, giorni di spedizione, codici sconto, data fine promo, lingue attive
+assets/js/i18n/   ← QUI tutti i TESTI: it.js, en.js, de.js, fr.js, es.js (stessa struttura)
+assets/js/app.js  Motore di traduzione, header/footer, carrello (localStorage), drawer, animazioni
 assets/css/style.css  Design system (colori e font in :root)
 assets/img/       Foto prodotto (ripulite dagli overlay TikTok)
 ```
+
+## Lingue
+
+Il sito è in **italiano, inglese, tedesco, francese e spagnolo**. Il mappamondo accanto al carrello apre il
+selettore; la scelta resta salvata nel browser. Alla prima visita il sito usa la lingua del dispositivo
+(se disponibile), altrimenti l'italiano.
+
+- Prezzi, date e percentuali seguono le convenzioni di ogni paese (44,90 € · €44.90 · 10 % · lun 12 ott).
+- Nomi dei paesi al checkout tradotti automaticamente dal browser.
+- Germania: pulsante d'ordine "Zahlungspflichtig bestellen", come richiesto dalla legge tedesca.
+- Francese: spazi fini prima di `: ; ! ?` inseriti in automatico.
+- Per cambiare un testo modifica la stessa voce in tutti i file di `assets/js/i18n/`.
+  Le parole tra graffe (`{free}`, `{returnDays}`…) si riempiono da sole con i valori di `data.js`.
+- Per togliere una lingua, rimuovila da `STORE.languages` in `data.js`.
 
 ## Funzioni di vendita incluse
 
@@ -50,7 +65,7 @@ per mostrare al cliente il prezzo originale. Quindi un negozio che regge il conf
 
 1. **Avere un marchio vero**, non il nome generico del fornitore → brand *Tepore*, nomi prodotto propri.
 2. **Prezzi onesti**: ricarico ragionevole, non 10× il prezzo AliExpress. Il valore aggiunto sta in garanzia, reso, assistenza in italiano e kit.
-3. **Tempi di spedizione realistici** e dichiarati (`STORE.shippingDays`).
+3. **Tempi di spedizione realistici** e dichiarati (`shippingDaysMin` / `shippingDaysMax`).
 4. **Foto proprie** appena possibile: le foto del fornitore si trovano con una ricerca per immagine.
 5. **Trasparenza**: termini, resi, P.IVA e contatti ben visibili.
 
@@ -63,3 +78,5 @@ per mostrare al cliente il prezzo originale. Quindi un negozio che regge il conf
 - [ ] **Dati aziendali** in `info.html#termini` (ragione sociale, P.IVA, REA) e testi legali rivisti da un professionista.
 - [ ] Newsletter e modulo contatti: collega Klaviyo/Brevo e Formspree/Netlify Forms (punti marcati nel codice).
 - [ ] Email `ciao@tepore.it` e dominio reali.
+- [ ] **Spedizioni UE**: i testi dicono che spedite in Italia e in tutta l'UE con gli stessi tempi e costi. Verifica con il tuo fornitore/corriere e correggi `data.js` e i file lingua se serve.
+- [ ] Assistenza clienti: se vendi all'estero, preparati a rispondere anche in inglese (o nelle lingue attive).

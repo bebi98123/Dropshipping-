@@ -2,9 +2,9 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Tepore</title>
-  <meta name="description" content="Prodotti riscaldati Tepore: spedizione gratuita sopra 49 €, reso 30 giorni, garanzia 2 anni.">
+  <meta name="description" content="Tepore">
   <meta name="theme-color" content="#17120f">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
 
   <main id="pdpRoot">
     <div class="container">
-      <nav class="breadcrumb" aria-label="Percorso"><a href="index.html">Home</a> / <a href="index.html#prodotti">Prodotti</a> / <span id="bcName"></span></nav>
+      <nav class="breadcrumb" data-i18n-attr="aria-label:a11y.breadcrumb"><a href="index.html" data-i18n="pdp.home"></a> / <a href="index.html#prodotti" data-i18n="pdp.products"></a> / <span id="bcName"></span></nav>
 
       <div class="pdp">
         <div class="gallery">
@@ -32,8 +32,8 @@
     <section class="section" style="padding-bottom:0">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Perché lo amerai</span>
-          <h2 id="hlTitle"></h2>
+          <span class="eyebrow" data-i18n="pdp.hlEyebrow"></span>
+          <h2 data-i18n="pdp.hlTitle"></h2>
         </div>
         <div class="highlights benefits" id="highlights"></div>
       </div>
@@ -46,20 +46,20 @@
     <section class="section section-cream" id="recensioni">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Recensioni</span>
-          <h2>Chi l'ha provato, <span class="grad-text">non torna indietro</span>.</h2>
+          <span class="eyebrow" data-i18n="reviews.eyebrow"></span>
+          <h2 data-i18n="pdp.revTitle"></h2>
           <div class="reviews-summary" id="pdpReviewSum"></div>
         </div>
         <div class="reviews-grid" id="pdpReviews"></div>
-        <p class="sample-note" id="sampleNote" hidden>Recensioni dimostrative: collega il tuo servizio di recensioni verificate per mostrare quelle reali.</p>
+        <p class="sample-note" id="sampleNote" hidden data-i18n="review.sampleNote"></p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Completa il rituale</span>
-          <h2>Potrebbe piacerti anche</h2>
+          <span class="eyebrow" data-i18n="pdp.crossEyebrow"></span>
+          <h2 data-i18n="pdp.crossTitle"></h2>
         </div>
         <div class="product-grid" id="crossSell" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"></div>
       </div>
@@ -68,9 +68,9 @@
     <section class="section section-cream" id="faq">
       <div class="container faq-wrap">
         <div class="section-head left reveal">
-          <span class="eyebrow">FAQ</span>
-          <h2>Domande frequenti</h2>
-          <p>Hai altri dubbi? Scrivici: <a href="mailto:ciao@tepore.it" style="color:var(--ember-deep);font-weight:600">ciao@tepore.it</a></p>
+          <span class="eyebrow" data-i18n="pdp.faqEyebrow"></span>
+          <h2 data-i18n="pdp.faqTitle"></h2>
+          <p data-i18n="pdp.faqLead"></p>
         </div>
         <div id="faqList"></div>
       </div>
@@ -82,6 +82,11 @@
   <div data-chrome-bottom></div>
 
   <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n/it.js"></script>
+  <script src="assets/js/i18n/en.js"></script>
+  <script src="assets/js/i18n/de.js"></script>
+  <script src="assets/js/i18n/fr.js"></script>
+  <script src="assets/js/i18n/es.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/product.js"></script>
 </body>

@@ -2,8 +2,8 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Checkout | Tepore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="meta.checkoutTitle">Checkout | Tepore</title>
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#17120f">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -16,7 +16,10 @@
   <header class="checkout-header">
     <div class="container">
       <a href="index.html" class="logo" id="coLogo"><span>tepore</span></a>
-      <span class="secure"><svg class="icon" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Checkout sicuro</span>
+      <div class="header-actions">
+        <span class="secure"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> <span data-i18n="co.secure"></span></span>
+        <span id="coLang"></span>
+      </div>
     </div>
   </header>
 
@@ -24,71 +27,71 @@
     <div class="co-main">
       <div>
         <form id="coForm" novalidate>
-          <div class="co-steps"><a href="index.html">Carrello</a> › <b>Informazioni</b> › Spedizione › Pagamento</div>
+          <div class="co-steps" data-i18n="co.steps"></div>
 
           <div class="co-block">
-            <h3>Pagamento rapido</h3>
+            <h3 data-i18n="co.express"></h3>
             <div class="express">
               <button type="button" class="ex-apple" data-express>Apple Pay</button>
               <button type="button" class="ex-pp" data-express>PayPal</button>
               <button type="button" class="ex-gp" data-express><span><b style="color:#4285f4">G</b> Pay</span></button>
             </div>
+            <p id="expressMsg" hidden style="font-size:13.5px;color:var(--muted);margin-top:10px" data-i18n="co.expressMsg"></p>
           </div>
-            <p id="expressMsg" hidden style="font-size:13.5px;color:var(--muted);margin-top:10px">Il pagamento rapido si attiva dopo aver collegato Apple Pay, PayPal o Google Pay. Per ora completa l'ordine con il modulo qui sotto.</p>
-          <div class="divider">oppure continua qui sotto</div>
+          <div class="divider" data-i18n="co.or"></div>
 
           <div class="co-block">
-            <h3>Contatto</h3>
+            <h3 data-i18n="co.contact"></h3>
             <div class="fields">
-              <div class="field full"><input type="email" id="email" name="email" placeholder=" " required autocomplete="email"><label for="email">Email</label></div>
+              <div class="field full"><input type="email" id="email" name="email" placeholder=" " required autocomplete="email"><label for="email" data-i18n="co.email"></label></div>
             </div>
-            <label class="check"><input type="checkbox" name="news" checked> Inviami offerte esclusive e novità via email</label>
+            <label class="check"><input type="checkbox" id="news" name="news" checked> <span data-i18n="co.news"></span></label>
           </div>
 
           <div class="co-block">
-            <h3>Consegna</h3>
+            <h3 data-i18n="co.delivery"></h3>
             <div class="fields">
               <div class="field full">
-                <select id="country" name="country"><option>Italia</option><option>San Marino</option><option>Città del Vaticano</option></select>
-                <label for="country">Paese</label>
+                <select id="country" name="country" autocomplete="country"></select>
+                <label for="country" data-i18n="co.country"></label>
               </div>
-              <div class="field"><input id="fname" name="fname" placeholder=" " required autocomplete="given-name"><label for="fname">Nome</label></div>
-              <div class="field"><input id="lname" name="lname" placeholder=" " required autocomplete="family-name"><label for="lname">Cognome</label></div>
-              <div class="field full"><input id="address" name="address" placeholder=" " required autocomplete="address-line1"><label for="address">Indirizzo e numero civico</label></div>
-              <div class="field full"><input id="address2" name="address2" placeholder=" " autocomplete="address-line2"><label for="address2">Scala, interno, citofono (opzionale)</label></div>
-              <div class="field"><input id="zip" name="zip" placeholder=" " required pattern="\d{5}" inputmode="numeric" autocomplete="postal-code"><label for="zip">CAP</label></div>
-              <div class="field"><input id="city" name="city" placeholder=" " required autocomplete="address-level2"><label for="city">Città</label></div>
-              <div class="field"><input id="prov" name="prov" placeholder=" " required maxlength="2" autocomplete="address-level1"><label for="prov">Provincia (es. MI)</label></div>
-              <div class="field"><input id="phone" name="phone" type="tel" placeholder=" " required autocomplete="tel"><label for="phone">Telefono (per il corriere)</label></div>
+              <div class="field"><input id="fname" name="fname" placeholder=" " required autocomplete="given-name"><label for="fname" data-i18n="co.fname"></label></div>
+              <div class="field"><input id="lname" name="lname" placeholder=" " required autocomplete="family-name"><label for="lname" data-i18n="co.lname"></label></div>
+              <div class="field full"><input id="address" name="address" placeholder=" " required autocomplete="address-line1"><label for="address" data-i18n="co.address"></label></div>
+              <div class="field full"><input id="address2" name="address2" placeholder=" " autocomplete="address-line2"><label for="address2" data-i18n="co.address2"></label></div>
+              <div class="field"><input id="zip" name="zip" placeholder=" " required autocomplete="postal-code"><label for="zip" data-i18n="co.zip"></label></div>
+              <div class="field"><input id="city" name="city" placeholder=" " required autocomplete="address-level2"><label for="city" data-i18n="co.city"></label></div>
+              <div class="field"><input id="prov" name="prov" placeholder=" " autocomplete="address-level1"><label for="prov" data-i18n="co.prov"></label></div>
+              <div class="field"><input id="phone" name="phone" type="tel" placeholder=" " required autocomplete="tel"><label for="phone" data-i18n="co.phone"></label></div>
             </div>
           </div>
 
           <div class="co-block">
-            <h3>Metodo di spedizione</h3>
+            <h3 data-i18n="co.method"></h3>
             <div class="pay-options" id="shipOptions"></div>
           </div>
 
           <div class="co-block">
-            <h3>Pagamento</h3>
-            <p style="font-size:14px;color:var(--muted);margin-bottom:12px">Tutte le transazioni sono sicure e crittografate.</p>
+            <h3 data-i18n="co.payment"></h3>
+            <p style="font-size:14px;color:var(--muted);margin-bottom:12px" data-i18n="co.payNote"></p>
             <div class="pay-options">
-              <label class="pay-opt"><input type="radio" name="pay" value="card" checked> Carta di credito / debito <span class="payments"><span class="pay visa" style="border:1px solid var(--line)">VISA</span><span class="pay mc" style="border:1px solid var(--line)"><span><i></i><i></i></span></span></span></label>
-              <label class="pay-opt"><input type="radio" name="pay" value="paypal"> PayPal <span class="payments"><span class="pay pp" style="border:1px solid var(--line)">Pay<em>Pal</em></span></span></label>
-              <label class="pay-opt"><input type="radio" name="pay" value="klarna"> Paga in 3 rate senza interessi <span class="payments"><span class="pay klarna">Klarna.</span></span></label>
+              <label class="pay-opt"><input type="radio" name="pay" value="card" checked> <span data-i18n="co.card"></span> <span class="payments"><span class="pay visa" style="border:1px solid var(--line)">VISA</span><span class="pay mc" style="border:1px solid var(--line)"><span><i></i><i></i></span></span></span></label>
+              <label class="pay-opt"><input type="radio" name="pay" value="paypal"> <span data-i18n="co.paypal"></span> <span class="payments"><span class="pay pp" style="border:1px solid var(--line)">Pay<em>Pal</em></span></span></label>
+              <label class="pay-opt"><input type="radio" name="pay" value="klarna"> <span data-i18n="co.klarna"></span> <span class="payments"><span class="pay klarna">Klarna.</span></span></label>
             </div>
-            <p style="font-size:13px;color:var(--muted);margin-top:10px">Dopo aver cliccato "Completa l'ordine" verrai indirizzato alla pagina di pagamento sicura del provider scelto.</p>
-            <label class="check"><input type="checkbox" name="terms" id="terms" required> <span>Ho letto e accetto i <a href="info.html#termini" style="text-decoration:underline">Termini di vendita</a> e l'<a href="info.html#privacy" style="text-decoration:underline">Informativa privacy</a></span></label>
+            <p style="font-size:13px;color:var(--muted);margin-top:10px" data-i18n="co.redirect"></p>
+            <label class="check"><input type="checkbox" name="terms" id="terms" required> <span data-i18n="co.terms"></span></label>
           </div>
 
-          <button class="btn btn-primary btn-block" style="--bh:62px;font-size:17px" type="submit" id="payBtn">Completa l'ordine</button>
-          <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:14px">Ordine con obbligo di pagamento</p>
+          <button class="btn btn-primary btn-block" style="--bh:62px;font-size:17px" type="submit" id="payBtn"></button>
+          <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:14px" data-i18n="co.binding"></p>
         </form>
 
         <div class="co-done" id="coDone">
-          <div class="big-check"><svg class="icon" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-          <h2>Grazie, <span id="doneName"></span>!</h2>
-          <p>Il tuo ordine <b id="orderNo"></b> è confermato. Ti abbiamo inviato una email di conferma con tutti i dettagli e, appena spedito, riceverai il tracking.</p>
-          <a href="index.html" class="btn btn-dark">Torna al negozio</a>
+          <div class="big-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h2 id="doneTitle"></h2>
+          <p id="doneText"></p>
+          <a href="index.html" class="btn btn-dark" data-i18n="co.back"></a>
         </div>
       </div>
     </div>
@@ -96,10 +99,10 @@
     <aside class="co-side">
       <div>
         <details open id="summaryDetails">
-          <summary class="co-mobile-summary"><span>Riepilogo ordine ▾</span><span id="mTotal"></span></summary>
+          <summary class="co-mobile-summary"><span><span data-i18n="co.summary"></span> ▾</span><span id="mTotal"></span></summary>
           <div class="co-side-body">
             <div id="coLines"></div>
-            <form class="code-form" id="coCode" style="margin:20px 0 6px"><input name="code" placeholder="Codice sconto" aria-label="Codice sconto"><button class="btn btn-dark btn-sm" type="submit">Applica</button></form>
+            <form class="code-form" id="coCode" style="margin:20px 0 6px"><input name="code" id="coCodeInput" data-i18n-attr="placeholder:a11y.discountCode;aria-label:a11y.discountCode"><button class="btn btn-dark btn-sm" type="submit" data-i18n="cart.apply"></button></form>
             <div class="code-msg" id="coCodeMsg"></div>
             <div class="co-sums" id="coSums"></div>
             <div class="co-assurance" id="coAssure"></div>
@@ -110,6 +113,11 @@
   </div>
 
   <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n/it.js"></script>
+  <script src="assets/js/i18n/en.js"></script>
+  <script src="assets/js/i18n/de.js"></script>
+  <script src="assets/js/i18n/fr.js"></script>
+  <script src="assets/js/i18n/es.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/checkout.js"></script>
 </body>
