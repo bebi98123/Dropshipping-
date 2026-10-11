@@ -13,6 +13,7 @@
       infoDesc: "Envíos, devoluciones, garantía, condiciones de venta, privacidad y contacto de Tepore.",
     },
     a11y: {
+      backToTop: "Volver arriba",
       openCart: "Abrir el carrito", closeCart: "Cerrar el carrito", openMenu: "Abrir el menú", closeMenu: "Cerrar el menú",
       language: "Idioma", mainNav: "Navegación principal", breadcrumb: "Ruta de navegación", payments: "Métodos de pago",
       decrease: "Reducir", increase: "Aumentar", image: "Imagen {n}", temperature: "Temperatura", rating: "{r} de 5",

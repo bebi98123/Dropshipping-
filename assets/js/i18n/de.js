@@ -13,6 +13,7 @@
       infoDesc: "Versand, Rückgabe, Gewährleistung, AGB, Datenschutz und Kontakt von Tepore.",
     },
     a11y: {
+      backToTop: "Nach oben",
       openCart: "Warenkorb öffnen", closeCart: "Warenkorb schließen", openMenu: "Menü öffnen", closeMenu: "Menü schließen",
       language: "Sprache", mainNav: "Hauptnavigation", breadcrumb: "Navigationspfad", payments: "Zahlungsarten",
       decrease: "Weniger", increase: "Mehr", image: "Bild {n}", temperature: "Temperatur", rating: "{r} von 5",

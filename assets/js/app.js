@@ -102,6 +102,7 @@
   /* ---------- Icone (SVG inline) ---------- */
   const ICONS = {
     cart: '<path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/>',
+    up: '<path d="M12 19V5M6 11l6-6 6 6"/>',
     globe: '<circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17"/><path d="M12 3c2.6 2.6 3.9 5.6 3.9 9s-1.3 6.4-3.9 9c-2.6-2.6-3.9-5.6-3.9-9S9.4 5.6 12 3Z"/>',
     menu: '<path d="M4 7h16M4 12h16M4 17h10"/>',
     close: '<path d="M6 6l12 12M18 6 6 18"/>',
@@ -278,7 +279,8 @@
         <div class="upsell" id="upsell"></div>
         <div class="drawer-foot" id="drawerFoot"></div>
       </aside>
-      <div class="toast" id="toast" role="status"></div>`;
+      <div class="toast" id="toast" role="status"></div>
+      <button class="to-top" id="toTop" type="button" aria-label="${t("a11y.backToTop")}" title="${t("a11y.backToTop")}">${icon("up")}</button>`;
 
     const slotTop = $("[data-chrome-top]");
     if (slotTop) slotTop.outerHTML = announce + header;
@@ -446,12 +448,18 @@
       $("#mobileMenu")?.classList.remove("open");
     });
 
+    // Freccia "torna su": compare dopo un po' di scroll
     const header = $(".header");
-    if (header) {
-      const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-    }
+    const toTop = $("#toTop");
+    const onScroll = () => {
+      if (header) header.classList.toggle("scrolled", window.scrollY > 10);
+      toTop.classList.toggle("show", window.scrollY > 600);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
   }
 
   /* ---------- Barra annunci: rotazione + countdown ---------- */

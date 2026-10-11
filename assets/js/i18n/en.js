@@ -13,6 +13,7 @@
       infoDesc: "Shipping, returns, warranty, terms of sale, privacy and contact details for Tepore.",
     },
     a11y: {
+      backToTop: "Back to top",
       openCart: "Open cart", closeCart: "Close cart", openMenu: "Open menu", closeMenu: "Close menu",
       language: "Language", mainNav: "Main navigation", breadcrumb: "Breadcrumb", payments: "Payment methods",
       decrease: "Decrease", increase: "Increase", image: "Image {n}", temperature: "Temperature", rating: "{r} out of 5",

@@ -15,6 +15,7 @@
       infoDesc: "Spedizioni, resi, garanzia, termini di vendita, privacy e contatti di Tepore.",
     },
     a11y: {
+      backToTop: "Torna su",
       openCart: "Apri il carrello", closeCart: "Chiudi il carrello", openMenu: "Apri il menu", closeMenu: "Chiudi il menu",
       language: "Lingua", mainNav: "Navigazione principale", breadcrumb: "Percorso", payments: "Metodi di pagamento",
       decrease: "Diminuisci", increase: "Aumenta", image: "Immagine {n}", temperature: "Temperatura", rating: "{r} su 5",

@@ -911,3 +911,22 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 860px) { .story-img { aspect-ratio: 16 / 10; } }
 .card .rating { white-space: nowrap; }
 .card .rating b { color: var(--ink); font-weight: 600; }
+
+/* ---------- Freccia "torna su" ---------- */
+.to-top {
+  position: fixed; z-index: 45;
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  width: 50px; height: 50px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--ink); color: #fff;
+  box-shadow: 0 12px 30px -10px rgba(23, 18, 15, 0.55);
+  opacity: 0; visibility: hidden; transform: translateY(14px) scale(0.9);
+  transition: opacity 0.35s var(--ease), transform 0.45s var(--ease), visibility 0.45s, bottom 0.45s var(--ease), background 0.25s;
+}
+.to-top .icon { width: 22px; height: 22px; stroke-width: 2.2; }
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { background: var(--ember-deep); }
+.to-top:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+/* sopra la barra "Aggiungi al carrello" fissa della pagina prodotto */
+.sticky-atc.show ~ .to-top { bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }

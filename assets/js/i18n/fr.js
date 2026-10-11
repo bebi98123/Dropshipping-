@@ -14,6 +14,7 @@
       infoDesc: "Livraison, retours, garantie, conditions générales de vente, confidentialité et contact de Tepore.",
     },
     a11y: {
+      backToTop: "Retour en haut",
       openCart: "Ouvrir le panier", closeCart: "Fermer le panier", openMenu: "Ouvrir le menu", closeMenu: "Fermer le menu",
       language: "Langue", mainNav: "Navigation principale", breadcrumb: "Fil d'Ariane", payments: "Moyens de paiement",
       decrease: "Diminuer", increase: "Augmenter", image: "Image {n}", temperature: "Température", rating: "{r} sur 5",
